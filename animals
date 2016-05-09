@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head/>
+	<script type="text/javascript">
+
+	// as a function
+	function Animal(name, breed){
+		this.name = name;
+		this.breed = breed;
+	}; 
+
+	Animal.prototype.say = function(){
+		document.write("Hi, Sergey, I am " + this.breed + " " + this.name + "<br/>");
+	};
+
+	var rabbit = new Animal ("Bunny", "Rabbit");
+	rabbit.say();
+	
+	var cow = new Animal ("Murka", "Cow");
+	cow.say();
+
+
+	//as object literal notation 
+	var crocodile ={
+		name: "Gena",
+		breed: "Crocodile",
+		say: function(){
+		document.write("Hello, I am " + crocodile.breed + " " + crocodile.name + "<br/>");
+		}
+	};
+	crocodile.say();
+
+
+	//as object constructor 
+	var cat = new Object();
+	cat.name = "Kuzya";
+	cat.breed = "Cat";
+	cat.say = "Hello, I am ";
+	document.write(cat.say + cat.breed + " " + cat.name);
+
+
+	
+	</script>
+<body>
+<body/>
+</html>
